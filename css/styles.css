@@ -1,0 +1,1097 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-image: linear-gradient(
+      rgba(242, 92, 84, 0.7),
+      rgba(242, 92, 84, 0.7)
+    ),
+    url(/assets/images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+@font-face {
+  font-family: Caveat-Regular;
+  src: url(/assets/fonts/Caveat-Regular.ttf);
+}
+header {
+  background: transparent;
+  color: black;
+  padding: 0.5rem 0;
+  font-family: Caveat-Regular;
+  z-index: -1;
+}
+
+header button {
+  text-decoration: none;
+  color: black;
+  width: 100px;
+  height: 37px;
+  background: #ffd972;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: black;
+  font-family: Caveat-Regular;
+  box-shadow: -5px 10px 10px 1px rgba(37, 37, 37, 0.2);
+}
+header .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  gap: 1.6rem;
+  font-size: 25px;
+}
+header .nav-container .logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+header .nav-container .nav {
+  display: flex;
+}
+header .nav-container .nav ul {
+  list-style: none;
+}
+header .nav-container .nav .nav--ul__one {
+  margin: 0 auto;
+  display: flex;
+  gap: 1.6rem;
+  font-size: 25px;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 5px;
+}
+header .nav-container .nav .nav--ul__one a {
+  text-decoration: none;
+  color: black;
+  z-index: 0;
+}
+header .nav-container .nav .nav--ul__one #home {
+  text-decoration: underline;
+}
+header .nav-container .nav .nav--ul__two {
+  display: flex;
+  gap: 1.6rem;
+  font-size: 25px;
+}
+header .nav-container .nav .nav--ul__two a {
+  text-decoration: none;
+  color: black;
+}
+header .nav-container .nav .container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+}
+header .nav-container .hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .nav-container .logo {
+    font-size: 1.2rem;
+    z-index: 2;
+  }
+  .nav-container .nav {
+    flex-direction: column;
+    gap: 2rem;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    padding-top: 6rem;
+    align-items: center;
+    text-align: center;
+    background-color: cornflowerblue;
+    color: black;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-container .nav.active {
+    right: 0;
+  }
+  .nav-container .nav .nav--ul__one,
+  .nav-container .nav .nav--ul__two {
+    flex-direction: column;
+    gap: 0.6rem;
+    z-index: 2;
+  }
+  .nav-container .hamburger-menu {
+    display: block;
+    z-index: 2;
+  }
+}
+@font-face {
+  font-family: Caveat-Regular;
+  src: url(/assets/fonts/Caveat-Regular.ttf);
+}
+.loged-in-header {
+  color: black;
+  padding: 0.5rem 0;
+  font-family: Caveat-Regular;
+  z-index: -1;
+}
+.loged-in-header .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  gap: 1.6rem;
+  font-size: 25px;
+}
+.loged-in-header .nav-container .logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.loged-in-header .nav-container .nav {
+  display: flex;
+}
+.loged-in-header .nav-container .nav ul {
+  list-style: none;
+}
+.loged-in-header .nav-container .nav .nav--ul__one {
+  margin: 0 auto;
+  display: flex;
+  gap: 1.6rem;
+  font-size: 25px;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 5px;
+}
+.loged-in-header .nav-container .nav .nav--ul__one a {
+  text-decoration: none;
+  color: black;
+  z-index: 0;
+}
+.loged-in-header .nav-container .nav .nav--ul__one #home {
+  text-decoration: underline;
+}
+.loged-in-header .nav-container .nav .nav--ul__two {
+  display: flex;
+  gap: 1.6rem;
+  font-size: 25px;
+}
+.loged-in-header .nav-container .nav .nav--ul__two a {
+  text-decoration: none;
+  color: black;
+}
+.loged-in-header .nav-container .nav .container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+}
+.loged-in-header .nav-container .hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .nav-container .logo {
+    font-size: 1.2rem;
+    z-index: 2;
+  }
+  .nav-container .nav {
+    flex-direction: column;
+    gap: 2rem;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    padding-top: 6rem;
+    align-items: center;
+    text-align: center;
+    background-color: cornflowerblue;
+    color: black;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-container .nav.active {
+    right: 0;
+  }
+  .nav-container .nav .nav--ul__one,
+  .nav-container .nav .nav--ul__two {
+    flex-direction: column;
+    gap: 0.6rem;
+    z-index: 2;
+  }
+  .nav-container .hamburger-menu {
+    display: block;
+    z-index: 2;
+  }
+}
+@font-face {
+  font-family: Caveat-Bold;
+  src: url(/assets/fonts/Caveat-Bold.ttf);
+}
+@font-face {
+  font-family: Caveat-Regular;
+  src: url(/assets/fonts/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: Lato-Regular;
+  src: url(/assets/fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: Lato-Italic;
+  src: url(/assets/fonts/Lato-Italic.ttf);
+}
+body {
+  height: 100%;
+  background-image: linear-gradient(
+      rgba(242, 92, 84, 0.7),
+      rgba(242, 92, 84, 0.7)
+    ),
+    url(/assets/images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+#app {
+  padding: 30px;
+  display: flex;
+  height: calc(100% - 100px);
+  align-items: center;
+  justify-content: center;
+}
+#app .circle-container {
+  width: 357px;
+  height: 357px;
+  /* background-color: cadetblue; */
+  position: relative;
+}
+#app .circle-container .small-circle {
+  width: 168px;
+  height: 168px;
+  background-color: #fcbcb8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: sans-serif;
+  position: absolute;
+  z-index: 1;
+  right: -50px;
+  top: -50px;
+  box-shadow: -5px 10px 10px 1px rgba(41, 41, 41, 0.5);
+}
+#app .circle-container .small-circle p {
+  width: 90px;
+  color: black;
+  font-family: Lato-Italic;
+  font-size: 10px;
+  text-align: center;
+  align-content: center;
+}
+#app .circle-container .yellow-circle {
+  width: 357px;
+  height: 357px;
+  background-color: #ffd972;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: sans-serif;
+  position: absolute;
+  z-index: 2;
+  box-shadow: -5px 10px 10px 1px rgba(41, 41, 41, 0.5);
+}
+#app .circle-container .yellow-circle .text-wrapper {
+  align-items: center;
+  justify-content: space-evenly;
+}
+#app .circle-container .yellow-circle .text-wrapper #title-text {
+  color: black;
+  font-family: Caveat-Bold;
+  font-size: 24px;
+}
+#app .circle-container .yellow-circle .text-wrapper p {
+  width: 130px;
+  color: black;
+  font-family: Lato-Regular;
+  font-size: 13px;
+  text-align: center;
+  align-content: center;
+}
+
+@font-face {
+  font-family: Lato-Italic;
+  src: url(/assets/fonts/Lato-Italic.ttf);
+}
+footer {
+  position: relative;
+  bottom: 0px;
+  padding-top: 100px;
+  height: 50px;
+  width: 100%;
+  font-family: Lato-Italic;
+  font-size: 15px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer #cr {
+  color: black;
+}
+footer .footer-links a {
+  text-decoration: none;
+  justify-content: space-between;
+  padding-right: 10px;
+  color: black;
+}
+footer .socials {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer .socials #insta {
+  height: 25px;
+  width: 25px;
+}
+footer .socials #fb {
+  height: 25px;
+  width: 25px;
+}
+
+@font-face {
+  font-family: Caveat-Regular;
+  src: url(/assets/fonts/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: Lato-Black;
+  src: url(/assets/fonts/Lato-Black.ttf);
+}
+@font-face {
+  font-family: Lato-Regular;
+  src: url(/assets/fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: Lato-Italic;
+  src: url(/assets/fonts/Lato-Italic.ttf);
+}
+.loged-in-header {
+  background: #ffd972;
+  color: black;
+  padding: 0.5rem 0;
+  font-family: Caveat-Regular;
+}
+.loged-in-header button {
+  text-decoration: none;
+  color: black;
+  width: 100px;
+  height: 37px;
+  background: #ffd972;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: black;
+  font-family: Caveat-Regular;
+  box-shadow: -5px 10px 10px 1px rgba(37, 37, 37, 0.2);
+}
+
+#login-wrapper {
+  background-color: #ffd972;
+  display: inline-block;
+  width: 100%;
+  height: 650px;
+  display: flex;
+}
+#login-wrapper .logIn {
+  width: 100%;
+  margin-top: 180px;
+  padding-left: 230px;
+}
+#login-wrapper .logIn input {
+  height: 50px;
+  font-size: 14px;
+  padding-top: 30px;
+  width: 200px;
+  border: none;
+  border-bottom: solid;
+  border-width: 2px;
+  background-color: #ffd972;
+  color: black;
+  font-family: Lato-Regular;
+  font-size: 12px;
+}
+#login-wrapper .logIn .loginHere {
+  font-size: 30px;
+  font-family: Lato-Black;
+}
+#login-wrapper .logIn .loginBtn {
+  font-size: 15px;
+  margin-top: 40px;
+  padding-top: 5px;
+  background-color: #ffd972;
+  width: 209px;
+  height: 52px;
+  background: #ffd972;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  font-size: 25px;
+  font-family: Caveat-Regular;
+  box-shadow: -5px 10px 10px 1px rgba(46, 46, 46, 0.5);
+}
+#login-wrapper .signUp {
+  width: 100%;
+  padding-left: 230px;
+  display: inline-block;
+}
+#login-wrapper .signUp input {
+  height: 50px;
+  font-size: 14px;
+  padding-top: 30px;
+  width: 200px;
+  border: none;
+  border-bottom: solid;
+  border-width: 2px;
+  background-color: #ffd972;
+  color: black;
+  font-family: Lato-Regular;
+  font-size: 12px;
+}
+#login-wrapper .signUp .noAccount {
+  margin-top: 170px;
+  position: absolute;
+  font-family: Lato-Italic;
+  font-size: 12px;
+}
+#login-wrapper .signUp .signUpHere {
+  font-size: 30px;
+  padding-top: 190px;
+  font-family: Lato-Black;
+}
+#login-wrapper .signUp .signBtn {
+  font-size: 15px;
+  margin-top: 40px;
+  padding-top: 5px;
+  width: 209px;
+  height: 52px;
+  background: #ffd972;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  font-size: 25px;
+  font-family: Caveat-Regular;
+  box-shadow: -5px 10px 10px 1px rgba(46, 46, 46, 0.5);
+}
+
+@font-face {
+  font-family: Caveat-Bold;
+  src: url(/assets/fonts/Caveat-Bold.ttf);
+}
+@font-face {
+  font-family: Caveat-Regular;
+  src: url(/assets/fonts/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: Lato-Regular;
+  src: url(/assets/fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: Lato-Italic;
+  src: url(/assets/fonts/Lato-Italic.ttf);
+}
+.browse-body {
+  height: 130%;
+  background-image: linear-gradient(
+      rgba(167, 232, 189, 0.7),
+      rgba(167, 232, 189, 0.7)
+    ),
+    url(/assets/images/recipe-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.h1 {
+  margin-bottom: 30px;
+  color: black;
+  padding-top: 75px;
+  padding-left: 120px;
+  font-family: Caveat-Regular;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#recs {
+  text-align: center;
+  padding: 20px;
+}
+#recs .recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5px;
+  row-gap: 30px;
+  justify-items: center;
+}
+#recs .recipe-grid .recipe-item {
+  display: flex;
+  align-items: stretch;
+  background-color: transparent;
+}
+#recs .recipe-grid .recipe-item .food-image {
+  width: 300px;
+  height: 263px;
+  object-fit: cover;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-top-right-radius: 24px; /* Rounds the right corners of the image */
+  border-bottom-right-radius: 24px;
+}
+#recs .recipe-grid .recipe-item .recipe-info-box {
+  width: 224px;
+  background-color: #fff;
+  padding: 10px 40px;
+  flex: 1;
+  text-align: left;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0px;
+}
+#recs .recipe-grid .recipe-item .recipe-info-box h2 {
+  margin: 0;
+  padding-bottom: 3px;
+  border-bottom: 5px solid black;
+  font-size: 1.2em;
+  color: black;
+  font-size: 15px;
+  font-family: Lato-Regular;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+#recs .recipe-grid .recipe-item .recipe-info-box p {
+  margin: 8px 0;
+  color: black;
+  font-size: 9px;
+  font-family: Lato;
+  letter-spacing: 1px;
+  line-height: 11px;
+}
+#recs .recipe-grid .recipe-item .recipe-info-box .icon-time-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: black;
+  font-family: Lato-Regular;
+  font-size: 10px;
+  justify-content: center;
+}
+#recs .recipe-grid .recipe-item .recipe-info-box .icon-time-info .icon-time {
+  width: 20px; /* Icon size */
+  height: 20px;
+  margin-right: 8px; /* Space between icon and text */
+}
+#recs .recipe-grid .recipe-item .recipe-info-box .icon-serv-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: black;
+  font-family: Lato-Regular;
+  font-size: 10px;
+  justify-content: center;
+}
+#recs .recipe-grid .recipe-item .recipe-info-box .icon-serv-info .icon-serv {
+  width: 20px; /* Icon size */
+  height: 20px;
+  margin-right: 8px; /* Space between icon and text */
+}
+
+#create-app {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px 150px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#create-app h1 {
+  font-size: 25px;
+  font-family: Caveat-Regular;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+#create-app .form-group {
+  margin-bottom: 15px;
+}
+#create-app .form-group label {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-family: Lato-Regular;
+  letter-spacing: 1px;
+}
+#create-app .form-group input {
+  width: 100%;
+  padding: 8px;
+  font-family: Lato-Regular;
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  border: none;
+  border-bottom: 4px solid black;
+  margin-bottom: 80px;
+}
+#create-app .form-group .add-button {
+  display: inline-block;
+  margin-top: 8px;
+  background-color: #efa7a7;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 100%;
+  cursor: pointer;
+  position: relative;
+  left: 1180px;
+  bottom: 128px;
+  font-size: 20px;
+}
+#create-app .form-group #recipe-serving {
+  margin-bottom: 120px;
+}
+#create-app .form-group .attach-file {
+  width: 110px;
+  height: 36.2px;
+  font-family: Caveat-Regular;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: black;
+  background-color: #efa7a7;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  left: 1100px;
+  bottom: 128px;
+  font-size: 20px;
+}
+#create-app .submit-button {
+  width: 422px;
+  height: 52px;
+  font-family: Caveat-Regular;
+  font-size: 25px;
+  letter-spacing: 1px;
+  background-color: #efa7a7;
+  border: none;
+  color: black;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 400px;
+}
+
+#edit-app {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px 150px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#edit-app h1 {
+  font-size: 25px;
+  font-family: Caveat-Regular;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+#edit-app .form-group {
+  margin-bottom: 15px;
+}
+#edit-app .form-group label {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-family: Lato-Regular;
+  letter-spacing: 1px;
+}
+#edit-app .form-group input {
+  width: 100%;
+  padding: 8px;
+  font-family: Lato-Regular;
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  border: none;
+  border-bottom: 4px solid black;
+  margin-bottom: 80px;
+}
+#edit-app .form-group .add-button {
+  display: inline-block;
+  margin-top: 8px;
+  background-color: #efa7a7;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 100%;
+  cursor: pointer;
+  position: relative;
+  left: 1180px;
+  bottom: 128px;
+  font-size: 20px;
+}
+#edit-app .form-group #recipe-serving {
+  margin-bottom: 120px;
+}
+#edit-app .form-group .attach-file {
+  width: 110px;
+  height: 36.2px;
+  font-family: Caveat-Regular;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: black;
+  background-color: #efa7a7;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  left: 1100px;
+  bottom: 128px;
+  font-size: 20px;
+}
+#edit-app .submit-button {
+  width: 422px;
+  height: 52px;
+  font-family: Caveat-Regular;
+  font-size: 25px;
+  letter-spacing: 1px;
+  background-color: #efa7a7;
+  border: none;
+  color: black;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 400px;
+}
+
+@font-face {
+  font-family: Caveat-Bold;
+  src: url(/assets/fonts/Caveat-Bold.ttf);
+}
+@font-face {
+  font-family: Caveat-Regular;
+  src: url(/assets/fonts/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: Lato-Regular;
+  src: url(/assets/fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: Lato-Italic;
+  src: url(/assets/fonts/Lato-Italic.ttf);
+}
+.your-body {
+  height: 130%;
+  background-image: linear-gradient(
+      rgba(167, 232, 189, 0.7),
+      rgba(167, 232, 189, 0.7)
+    ),
+    url(/assets/images/recipe-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.h1 {
+  margin-bottom: 30px;
+  color: black;
+  padding-top: 75px;
+  padding-left: 120px;
+  font-family: Caveat-Regular;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#view {
+  width: 127.66px;
+  height: 42.01px;
+  border-radius: 25px;
+  font-family: Caveat-Regular;
+  font-size: 20px;
+  color: black;
+  letter-spacing: 1px;
+  background-color: #ffd972;
+  border: none;
+  box-shadow: -5px 10px 10px 1px rgba(41, 41, 41, 0.5);
+  position: relative;
+  left: 210px;
+  bottom: 170px;
+}
+#view a {
+  text-decoration: none;
+  color: black;
+}
+
+#edit {
+  width: 127.66px;
+  height: 42.01px;
+  border-radius: 25px;
+  font-family: Caveat-Regular;
+  font-size: 20px;
+  color: black;
+  letter-spacing: 1px;
+  background-color: #ffd972;
+  border: none;
+  box-shadow: -5px 10px 10px 1px rgba(41, 41, 41, 0.5);
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+}
+#edit a {
+  text-decoration: none;
+  color: black;
+}
+
+#delete {
+  width: 127.66px;
+  height: 42.01px;
+  border-radius: 25px;
+  font-family: Caveat-Regular;
+  font-size: 20px;
+  color: black;
+  letter-spacing: 1px;
+  background-color: #ffd972;
+  border: none;
+  box-shadow: -5px 10px 10px 1px rgba(41, 41, 41, 0.5);
+  position: relative;
+  left: 30px;
+  bottom: 0px;
+  cursor: pointer;
+}
+
+#your-recs {
+  text-align: center;
+  padding: 20px;
+}
+#your-recs .recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5px;
+  row-gap: 30px;
+  justify-items: center;
+}
+#your-recs .recipe-grid .recipe-item {
+  display: flex;
+  align-items: stretch;
+  background-color: transparent;
+}
+#your-recs .recipe-grid .recipe-item .food-image {
+  width: 300px;
+  height: 263px;
+  object-fit: cover;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-top-right-radius: 24px; /* Rounds the right corners of the image */
+  border-bottom-right-radius: 24px;
+}
+#your-recs .recipe-grid .recipe-item .recipe-info-box {
+  width: 224px;
+  background-color: #fff;
+  padding: 10px 40px;
+  flex: 1;
+  text-align: left;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0px;
+}
+#your-recs .recipe-grid .recipe-item .recipe-info-box h2 {
+  margin: 0;
+  padding-bottom: 3px;
+  border-bottom: 5px solid black;
+  font-size: 1.2em;
+  color: black;
+  font-size: 15px;
+  font-family: Lato-Regular;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+#your-recs .recipe-grid .recipe-item .recipe-info-box p {
+  margin: 8px 0;
+  color: black;
+  font-size: 9px;
+  font-family: Lato;
+  letter-spacing: 1px;
+  line-height: 11px;
+}
+#your-recs .recipe-grid .recipe-item .recipe-info-box .icon-time-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: black;
+  font-family: Lato-Regular;
+  font-size: 10px;
+  justify-content: center;
+}
+#your-recs
+  .recipe-grid
+  .recipe-item
+  .recipe-info-box
+  .icon-time-info
+  .icon-time {
+  width: 20px; /* Icon size */
+  height: 20px;
+  margin-right: 8px; /* Space between icon and text */
+}
+#your-recs .recipe-grid .recipe-item .recipe-info-box .icon-serv-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: black;
+  font-family: Lato-Regular;
+  font-size: 10px;
+  justify-content: center;
+}
+#your-recs
+  .recipe-grid
+  .recipe-item
+  .recipe-info-box
+  .icon-serv-info
+  .icon-serv {
+  width: 20px; /* Icon size */
+  height: 20px;
+  margin-right: 8px; /* Space between icon and text */
+}
+
+#view-app {
+  width: 100%;
+  background-color: white;
+}
+#view-app .recipe-container {
+  width: 800px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0 auto;
+  font-family: Caveat-Regular;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+#view-app .recipe-container .image-section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+  left: 0px;
+  display: flex;
+}
+#view-app .recipe-container .image-section img {
+  width: 468px;
+  height: 421px;
+}
+#view-app .recipe-container .image-section .recipe-title {
+  position: absolute;
+  top: 10px;
+  left: -50px;
+  font-size: 25px;
+  font-family: Lato-Regular;
+  letter-spacing: 4px;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #333;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+}
+#view-app .recipe-container .ingredients-section,
+#view-app .recipe-container .instructions-section {
+  margin-bottom: 40px;
+}
+#view-app .recipe-container .ingredients-section h3,
+#view-app .recipe-container .instructions-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+#view-app .recipe-container .ingredients-section p,
+#view-app .recipe-container .ingredients-section li,
+#view-app .recipe-container .instructions-section p,
+#view-app .recipe-container .instructions-section li {
+  line-height: 1.6;
+  color: #555;
+}
+#view-app .recipe-container .ingredients-section ul,
+#view-app .recipe-container .instructions-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+#view-app .recipe-container .ingredients-section ol,
+#view-app .recipe-container .instructions-section ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+#view-app .recipe-container .details-section {
+  color: black;
+  text-align: left;
+  padding-left: 10px;
+}
+#view-app .recipe-container .details-section p {
+  padding-bottom: 20px;
+}
+#view-app #edit-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 127.66px;
+  height: 42.01px;
+  border-radius: 25px;
+  font-family: Caveat-Regular;
+  font-size: 20px;
+  color: black;
+  letter-spacing: 1px;
+  background-color: #ffd972;
+  border: none;
+}
+#view-app #edit-button a {
+  text-decoration: none;
+  color: black;
+}

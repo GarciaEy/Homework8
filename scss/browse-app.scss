@@ -1,0 +1,141 @@
+@font-face {
+  font-family: Caveat-Bold;
+  src: url(/assets/fonts/Caveat-Bold.ttf);
+}
+
+@font-face {
+  font-family: Caveat-Regular;
+  src: url(/assets/fonts/Caveat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lato-Regular;
+  src: url(/assets/fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lato-Italic;
+  src: url(/assets/fonts/Lato-Italic.ttf);
+}
+
+// header {
+//   //   background: #ffd972;
+//   color: black;
+//   padding: 0.5rem 0;
+//   font-family: Caveat-Regular;
+
+.browse-body {
+  height: 130%;
+  background-image: linear-gradient(
+      rgba(167, 232, 189, 0.7),
+      rgba(167, 232, 189, 0.7)
+    ),
+    url(/assets/images/recipe-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.h1 {
+  margin-bottom: 30px;
+  color: black;
+  padding-top: 75px;
+  padding-left: 120px;
+  font-family: Caveat-Regular;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#recs {
+  text-align: center;
+  padding: 20px;
+
+  .recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5px;
+    row-gap: 30px;
+    justify-items: center;
+
+    .recipe-item {
+      display: flex;
+      align-items: stretch;
+      background-color: transparent;
+
+      .food-image {
+        width: 300px;
+        height: 263px;
+        object-fit: cover;
+        border-top-left-radius: 24px;
+        border-bottom-left-radius: 24px;
+        border-top-right-radius: 24px; /* Rounds the right corners of the image */
+        border-bottom-right-radius: 24px;
+      }
+      .recipe-info-box {
+        width: 224px;
+        background-color: #fff;
+        padding: 10px 40px;
+        flex: 1;
+        text-align: left;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 0px;
+
+        h2 {
+          margin: 0;
+          padding-bottom: 3px;
+          border-bottom: 5px solid black;
+          font-size: 1.2em;
+          color: black;
+          font-size: 15px;
+          font-family: Lato-Regular;
+          letter-spacing: 1px;
+          font-weight: lighter;
+        }
+
+        p {
+          margin: 8px 0;
+          color: black;
+          font-size: 9px;
+          font-family: Lato;
+          letter-spacing: 1px;
+          line-height: 11px;
+        }
+
+        .icon-time-info {
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+          color: black;
+          font-family: Lato-Regular;
+          font-size: 10px;
+          justify-content: center;
+
+          .icon-time {
+            width: 20px; /* Icon size */
+            height: 20px;
+            margin-right: 8px; /* Space between icon and text */
+          }
+        }
+
+        .icon-serv-info {
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+          color: black;
+          font-family: Lato-Regular;
+          font-size: 10px;
+          justify-content: center;
+
+          .icon-serv {
+            width: 20px; /* Icon size */
+            height: 20px;
+            margin-right: 8px; /* Space between icon and text */
+          }
+        }
+      }
+    }
+  }
+}

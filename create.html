@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 8</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header style="background-color: white">
+      <div class="nav-container">
+        <div class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="169"
+            height="55"
+            viewBox="0 0 169 55"
+          >
+            <g id="Group_1" data-name="Group 1" transform="translate(-50 -38)">
+              <circle
+                id="Ellipse_1"
+                data-name="Ellipse 1"
+                cx="16"
+                cy="16"
+                r="16"
+                transform="translate(52 38)"
+                fill="#c7eae4"
+              />
+              <circle
+                id="Ellipse_2"
+                data-name="Ellipse 2"
+                cx="15"
+                cy="15"
+                r="15"
+                transform="translate(76 54)"
+                fill="#ffd972"
+              />
+              <circle
+                id="Ellipse_3"
+                data-name="Ellipse 3"
+                cx="27"
+                cy="27"
+                r="27"
+                transform="translate(103 39)"
+                fill="#a7e8bd"
+              />
+              <circle
+                id="Ellipse_4"
+                data-name="Ellipse 4"
+                cx="12"
+                cy="12"
+                r="12"
+                transform="translate(185 57)"
+                fill="#efa7a7"
+              />
+              <text
+                id="The_Jungle_Cook"
+                data-name="The Jungle Cook"
+                transform="translate(50 74)"
+                font-size="25"
+                font-family="Caveat-Regular, Caveat"
+                letter-spacing="0.1em"
+              >
+                <tspan x="0" y="0">The Jungle Cook</tspan>
+              </text>
+            </g>
+          </svg>
+        </div>
+        <nav class="nav">
+          <ul class="nav--ul__one">
+            <li class="nav-link"><a id="home" href="index.html">Home</a></li>
+            <li class="nav-link">
+              <a id="browse" href="browse.html">Browse</a>
+            </li>
+            <li class="nav-link">
+              <a id="create" href="create.html">Create Recipe</a>
+            </li>
+          </ul>
+
+          <ul class="nav--ul__two">
+            <li class="nav-link">
+              <a id="login" href="login.html"><button>Login</button></a>
+            </li>
+
+            <!-- <li class="nav-link"><a id="signUp" href="#">SignUp</a></li> -->
+          </ul>
+
+          <div class="container"></div>
+        </nav>
+        <span class="hamburger-menu material-symbols-outlined"> menu </span>
+      </div>
+    </header>
+
+    <div id="create-app">
+      <h1>Hey Michael, create your recipe!</h1>
+      <form>
+        <div class="form-group">
+          <label for="recipe-image"></label>
+          <input
+            type="text"
+            id="recipe-image"
+            name="recipe-image"
+            placeholder="Add Recipe Image"
+          />
+          <button type="submit" class="attach-file">Attach File</button>
+
+        </div>
+
+        <div class="form-group">
+          <label for="recipe-name"></label>
+          <input
+            type="text"
+            id="recipe-name"
+            name="recipe-name"
+            placeholder="Recipe Name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="recipe-description"></label>
+          <input
+             type="text" id="recipe-description"
+            name="recipe-description"
+            placeholder="Recipe Description"
+          ></input>
+        </div>
+
+        <div class="form-group">
+          <label for="recipe-time"></label>
+          <input
+            type="text"
+            id="recipe-time"
+            name="recipe-time"
+            placeholder="Recipe Total Time"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="recipe-serving"></label>
+          <input
+            type="text"
+            id="recipe-serving"
+            name="recipe-serving"
+            placeholder="Recipe Serving Size"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Enter Ingredients:</label>
+          <input type="text" name="ingredient-1" placeholder="Ingredient #1" />
+          <input type="text" name="ingredient-2" placeholder="Ingredient #2" />
+          <input type="text" name="ingredient-3" placeholder="Ingredient #3" />
+          <button type="button" class="add-button">+</button>
+        </div>
+
+        <div class="form-group">
+          <label>Enter Instructions:</label>
+          <input
+            type="text"
+            name="instruction-1"
+            placeholder="Instruction #1"
+          />
+          <input
+            type="text"
+            name="instruction-2"
+            placeholder="Instruction #2"
+          />
+          <input
+            type="text"
+            name="instruction-3"
+            placeholder="Instruction #3"
+          />
+          <button type="button" class="add-button">+</button>
+        </div>
+
+        <button type="submit" class="submit-button">Create Recipe</button>
+      </form>
+    </div>
+
+    <footer>
+      <span id="cr">Copyright © 2019 The Jungle Cook</span>
+      <div class="footer-links">
+        <a href="login.html">Login</a>
+        <a href="recipes.html">Recipes by Category</a>
+        <a href="privacy.html">Privacy and Copyright</a>
+        <a href="create-recipe.html">Create Recipe</a>
+        <a href="your-recipes.html">Your Recipes</a>
+      </div>
+      <div class="socials">
+        <img id="insta" src="/assets/images/instagram.svg" alt="Instagram" />
+        <img id="fb" src="/assets/images/facebook.svg" alt="Facebook" />
+      </div>
+    </footer>
+
+    <script src="app/app.js"></script>
+    <script src="lib/jquery-3.7.1.min.js"></script>
+  </body>
+</html>

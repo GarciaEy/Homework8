@@ -1,0 +1,103 @@
+// header {
+//   background: white;
+//   color: black;
+//   padding: 0.5rem 0;
+//   font-family: Caveat-Regular;
+// }
+
+#edit-app {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px 150px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    font-size: 25px;
+    font-family: Caveat-Regular;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      margin-bottom: 40px;
+      font-size: 20px;
+      font-family: Lato-Regular;
+      letter-spacing: 1px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+
+      font-family: Lato-Regular;
+      font-size: 20px;
+      font-weight: lighter;
+      letter-spacing: 1px;
+
+      border: none;
+      border-bottom: 4px solid black;
+      margin-bottom: 80px;
+    }
+
+    .add-button {
+      display: inline-block;
+      margin-top: 8px;
+      background-color: #efa7a7;
+      border: none;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 100%;
+      cursor: pointer;
+
+      position: relative;
+      left: 1180px;
+      bottom: 128px;
+      font-size: 20px;
+    }
+
+    #recipe-serving {
+      margin-bottom: 120px;
+    }
+
+    .attach-file {
+      width: 110px;
+      height: 36.2px;
+
+      font-family: Caveat-Regular;
+      font-size: 17px;
+      letter-spacing: 1px;
+      color: black;
+
+      background-color: #efa7a7;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+
+      position: relative;
+      left: 1100px;
+      bottom: 128px;
+      font-size: 20px;
+    }
+  }
+  .submit-button {
+    width: 422px;
+    height: 52px;
+    font-family: Caveat-Regular;
+    font-size: 25px;
+    letter-spacing: 1px;
+    background-color: #efa7a7;
+    border: none;
+    color: black;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 400px;
+  }
+}
